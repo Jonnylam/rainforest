@@ -1,2 +1,29 @@
-<h1>Products#new</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Products#new</h1>
 <p>Find me in app/views/products/new.html.erb</p>
+<p> hello </o>
+	<%= form_for @product do |f| %>
+		<br>
+		<%= f.label :name %>
+		<br>
+		<%= f.text_field :name %>
+		<br>
+		<%= f.label :descripton %>
+		<br>
+		<%= f.text_area :description %>
+		<br>
+		<%= f.label :price_in_cents %>
+		<br>
+		<%= f.text_field :price_in_cents %>
+		<br>
+		<%= f.submit "save" %> 
+		<br>
+	<% end %>
+</body>
+</html>
