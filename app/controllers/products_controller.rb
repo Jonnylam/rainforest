@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   		if @product.save 
   			redirect_to @product
   		else
+        flash.now[:alert] = "Error Error Error"
   			render :new
   		end
   end

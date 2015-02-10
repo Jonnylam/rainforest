@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
-  get 'reviews/show'
+root 'products#index'
+  # get 'reviews/show'
 
-  get 'reviews/create'
+  # get 'reviews/create'
 
-  get 'reviews/destroy'
+  # get 'reviews/destroy'
 
-  get 'users/new'
+  # get 'users/new'
 
-  get 'users/create'
+  # get 'users/create'
 
   resources :products do
-    resources :reviews, only: [:show, :create, :destroy]
+  resources :reviews, only: [:show, :create, :destroy, :edit]
   end
 
   resources :users, only: [:new, :create]
