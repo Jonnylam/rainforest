@@ -11,7 +11,7 @@ root 'products#index'
   # get 'users/create'
 
   resources :products do
-  resources :reviews, only: [:show, :create, :destroy, :edit]
+  resources :reviews
   end
 
   resources :users, only: [:new, :create]
