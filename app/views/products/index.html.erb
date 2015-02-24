@@ -1,17 +1,13 @@
-
-
-
 <h1 class = "titlepage">List of the Products Page</h1>
-<p>Check out each product</p>
-<%= link_to "Create a New Product Here", "/products/new" %>
-	<% @products.each do |product| %>
-		<p>
-		<br>
-		<%= product.name %>
-		<br>
-		<%= product.description %>
-		<br>
-		<%= product.formatted_price %>
-		</p>
-		<%= link_to "Edit Product", "/products/#{product.id}" %>
-<% end %>
+	<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+	  <%= text_field_tag :search, params[:search] %>
+	  <%= submit_tag "Search" %>
+	<% end %>
+
+	<p>Check out each product</p>
+		<%= link_to "Create a New Product Here", "/products/new" %>
+	<div id = "products">
+		<%= render @products %>
+	</div>
+ 
+ 
