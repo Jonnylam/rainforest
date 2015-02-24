@@ -1,10 +1,13 @@
+		<p>
 		<br>
 		<%= product.name %>
 		<br>
 		<%= product.description %>
 		<br>
-		<%= product.formatted_price %>
-		</p>
+		Price: $<%= product.formatted_price %>
+		<br>
 		<%= link_to "Edit Product", "/products/#{product.id}" %>
+		</p>
+		
 
 
