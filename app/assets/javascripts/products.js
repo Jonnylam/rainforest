@@ -3,11 +3,12 @@ $(document).ready(function(){
     event.preventDefault();
     var searchValue = $('#search').val();
 
- // $.get('/products?search=' + searchValue)
- //      .done(function(data){
- //        console.log(data);
- //        $('#products').html(data);
- //      });
   $.getScript('/products?search=' + searchValue);
+  });
+
+  $(window).scroll(function(){
+  	if ($(this).scrollTop() > $(document).height() - $(window).height() - 50) {
+  		return alert('near bottom')		
+  	}
   });
 });
