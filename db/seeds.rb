@@ -10,7 +10,8 @@
 	Product.create!(
 		name: Faker::Commerce.product_name,
 		description: Faker::Company.catch_phrase,
-		price_in_cents: rand(10000)
+		price_in_cents: rand(10000),
+		created_at: Faker::Time.between(7.days.ago, Time.now, :all)
 		)
 	print "|"
 end

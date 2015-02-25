@@ -6,15 +6,16 @@
 	<% end %>
 
 	<p>Check out each product</p>
-  <small><%= page_entries_info @products %></small>
+<!--   <small><%= page_entries_info @products %></small> -->
 	<div id = "products">
 		<%= render @products %>
 	</div>
 
+  <%= paginate @products %>
+ 
 
   <br>
 
-  <%= paginate @products %>
  
 
 <!-- 
