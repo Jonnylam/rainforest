@@ -19,7 +19,7 @@ class ReviewsController < ApplicationController
     # )
 
     if @review.save
-      redirect_to products_path, notice: 'Review created successfully'
+      redirect_to product_path(@product), notice: 'Review created successfully'
     else
       render 'products/show'
     end
@@ -27,6 +27,7 @@ class ReviewsController < ApplicationController
 
   def edit
     @review = Review.find(params[:id])
+    load_product
   end
 
   def update
